@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_recipes/src/pages/categories_page.dart';
+import 'package:my_recipes/src/pages/category_meals_page.dart';
+import 'package:my_recipes/src/pages/tabs_bottom_page.dart';
+import 'package:my_recipes/src/pages/tabs_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,7 +11,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "My Recipes",
-      home: CategoriesPage(),
       theme: ThemeData(
         primarySwatch: Colors.pink,
         accentColor: Colors.amber,
@@ -28,6 +30,11 @@ class MyApp extends StatelessWidget {
               ),
             ),
       ),
+      initialRoute: '/',
+      routes: {
+        '/': (ctx) => TabsBottomPage(),
+        '/category-meals': (ctx) => CategoryMealsPage(),
+      },
       debugShowCheckedModeBanner: false,
     );
   }
