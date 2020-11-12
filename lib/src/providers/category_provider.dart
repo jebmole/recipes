@@ -9,7 +9,7 @@ class CategoryProvider {
   Future<List<Category>> getCategories() async {
     final url = Uri.https(_url, 'api/Categories');
 
-    final resp = await http.post(url);
+    final resp = await http.get(url);
     final decodedData = json.decode(resp.body);
     List<Category> categories = new List();
 
