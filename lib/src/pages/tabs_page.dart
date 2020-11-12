@@ -22,7 +22,7 @@ class TabsPage extends StatelessWidget {
           ]),
         ),
         body: TabBarView(children: [
-          CategoriesPage(),
+          //CategoriesPage(),
           MyLicensePage(),
         ]),
       ),

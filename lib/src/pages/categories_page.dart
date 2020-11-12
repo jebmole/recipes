@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:my_recipes/src/data/dummy_data.dart';
+import 'package:my_recipes/src/models/category.dart';
 import 'package:my_recipes/src/widgets/category_item.dart';
 
 class CategoriesPage extends StatelessWidget {
+  final List<Category> _categoriesList;
+  CategoriesPage(this._categoriesList);
   @override
   Widget build(BuildContext context) {
     return GridView(
@@ -13,7 +15,7 @@ class CategoriesPage extends StatelessWidget {
         mainAxisSpacing: 20,
         childAspectRatio: 3 / 2,
       ),
-      children: DUMMY_CATEGORIES
+      children: _categoriesList
           .map(
             (category) => CategoryItem(
               category.id,

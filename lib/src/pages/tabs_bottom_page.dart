@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_recipes/src/pages/categories_page.dart';
+import 'package:my_recipes/src/pages/home_page.dart';
 import 'package:my_recipes/src/pages/license_page.dart';
 
 class TabsBottomPage extends StatefulWidget {
@@ -10,7 +11,7 @@ class TabsBottomPage extends StatefulWidget {
 class _TabsBottomPageState extends State<TabsBottomPage> {
   final List<Map<String, Object>> _pages = [
     {
-      'page': CategoriesPage(),
+      'page': HomePage(),
       'title': 'Categories',
     },
     {
